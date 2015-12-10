@@ -53,3 +53,6 @@ Edit or create the `~/.nylas/config.cson` file and define `selfhosted` for the `
 ```
 
 More information about running N1 against a self hosted sync engine can be found here : https://github.com/nylas/N1/blob/master/CONTRIBUTING.md#running-against-open-source-sync-engine
+
+# Need help to run your sync-engine ?
+See https://hub.docker.com/r/nhurel/nylas-sync-engine/ to start a sync-engine container
