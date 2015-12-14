@@ -5,7 +5,7 @@ echo "
 +    else if env in ['selfhosted']
 +      @AppID = 'n/a'
 +      @APIRoot = '$ENGINE_URL'" > /tmp/nylas-api.patch
-patch /tmp/N1/src/flux/nylas-api.coffee /tmp/nylas-api.patch
+patch /tmp/N1-$N1_RELEASE/src/flux/nylas-api.coffee /tmp/nylas-api.patch
 echo nylas config file patched !
 
-cd /tmp/N1 && script/build && script/grunt mkdeb
+cd /tmp/N1-$N1_RELEASE && script/build ci 
