@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y git\
 	libgnome-keyring-common\ 
 	fakeroot
 WORKDIR /tmp
-ENV N1_RELEASE 0.3.29
+ENV N1_RELEASE 0.3.32
 RUN curl -L https://github.com/nylas/N1/archive/$N1_RELEASE.tar.gz | tar xvz 
 #RUN tar -xvzf N1-$N1_RELEASE.tar.gz && rm N1-$N1_RELEASE.tar.gz 
 WORKDIR /tmp/N1-$N1_RELEASE
