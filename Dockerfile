@@ -1,4 +1,4 @@
-FROM readytalk/nodejs
+FROM readytalk/nodejs:0.10.36
 MAINTAINER nathan@hurel.me
 
 RUN apt-get update && apt-get install -y git\
@@ -9,9 +9,8 @@ RUN apt-get update && apt-get install -y git\
 	libgnome-keyring-common\ 
 	fakeroot
 WORKDIR /tmp
-ENV N1_RELEASE 0.3.36
+ENV N1_RELEASE 0.3.38
 RUN curl -L https://github.com/nylas/N1/archive/$N1_RELEASE.tar.gz | tar xvz 
-#RUN tar -xvzf N1-$N1_RELEASE.tar.gz && rm N1-$N1_RELEASE.tar.gz 
 WORKDIR /tmp/N1-$N1_RELEASE
 RUN script/bootstrap
 
