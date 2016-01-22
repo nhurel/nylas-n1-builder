@@ -8,15 +8,22 @@ and look at their repositories https://github.com/nylas/sync-engine and https://
 This image is designed to run a one-shot container and destroy it.
 Assuming your sync engine is available at `http://your-hostname.com:5555`,  run :
 ```bash
-docker run -e ENGINE_URL=http://your-hostname.com:5555 --name n1 nhurel/n1-builder
-docker cp n1:/tmp/nylas-build/nylas-0.3.26-amd64.deb .
+docker run -e ENGINE_URL=http://your-hostname.com:5555 --name n1 nhurel/nylas-n1-builder
+docker cp n1:/tmp/nylas-build/nylas-0.3.45-amd64.deb .
 docker rm n1
 ```
 
 ### Install N1
 Once your package is built, simply run the following command to install it :
 ```bash
-dpkg -i nylas-0.3.26-amd64.deb
+dpkg -i nylas-0.3.45-amd64.deb
+```
+
+### Build your RPM
+This image now supports also building the RPM package of N1.
+After your docker run, get it simply by running :
+```bash
+docker cp n1:/tmp/nylas-build/nylas-0.3.45-0.1.x86_64.rpm .
 ```
 
 ### Confugure N1 to use your self-hsoted sync engine
