@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y git\
 	fakeroot\
 	rpm
 WORKDIR /tmp
-ENV N1_RELEASE 0.3.45
+ENV N1_RELEASE 0.4.4
 RUN curl -L https://github.com/nylas/N1/archive/$N1_RELEASE.tar.gz | tar xvz 
 WORKDIR /tmp/N1-$N1_RELEASE
 RUN script/bootstrap

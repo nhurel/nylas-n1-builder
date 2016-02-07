@@ -1,5 +1,5 @@
 #!/bin/bash
-m=$(sed -n '/localhost/=' src/flux/nylas-api.coffee); 
+m=$(sed -n '/localhost/=' src/flux/nylas-api.coffee | tail -n1); 
 echo "
 @@ -$m,0 +$((m+1)),3 @@
 +    else if env in ['selfhosted']
